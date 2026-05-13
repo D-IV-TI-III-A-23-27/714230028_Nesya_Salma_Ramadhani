@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ilustrasi Decision Tree: Prediksi Main Tennis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Visualisasi Decision Tree</p>
+        <h1>Ilustrasi Decision Tree: Prediksi Main Tennis</h1>
+        <p class="hero-copy">Visualisasi bagaimana AI mengambil keputusan langkah demi langkah</p>
+      </div>
+      <div class="hero-graphic" aria-hidden="true">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="sun"></div>
+        <div class="tree-svg">
+          <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="80" r="60" fill="#37A57F" opacity="0.94" />
+            <circle cx="90" cy="60" r="38" fill="#1F8E6C" opacity="0.95" />
+            <circle cx="150" cy="60" r="38" fill="#1F8E6C" opacity="0.95" />
+            <rect x="108" y="120" width="24" height="80" rx="12" fill="#4A7C60" />
+            <path d="M120 130 L70 190 L82 198 L120 150 L158 198 L170 190 Z" fill="#2E6951" />
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="content-section" id="pengertian">
+        <div class="section-head">
+          <span>1</span>
+          <h2>Pengertian Decision Tree</h2>
+        </div>
+        <div class="subvisual">
+          <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1f4d3b"/>
+                <stop offset="100%" stop-color="#092214"/>
+              </linearGradient>
+            </defs>
+            <rect width="280" height="180" rx="24" fill="url(#skyGrad)" />
+            <circle cx="60" cy="50" r="26" fill="#f9d97e" opacity="0.95" />
+            <path d="M40 70 Q48 58 60 60 Q72 56 82 68 Q96 74 104 68 Q116 56 128 64 Q140 72 148 70 L148 90 H40 Z" fill="#72c4a5" opacity="0.9"/>
+            <rect x="122" y="94" width="20" height="48" rx="8" fill="#3e7a53" />
+            <circle cx="132" cy="90" r="40" fill="#2f7f60" />
+            <circle cx="112" cy="70" r="12" fill="#9fe2c6" />
+            <circle cx="148" cy="64" r="10" fill="#9fe2c6" />
+            <circle cx="124" cy="50" r="8" fill="#cff4df" />
+            <path d="M210 48 Q220 30 238 40 Q256 44 250 60 Q238 72 220 66 Q214 58 210 48 Z" fill="#d2f2dd" />
+            <circle cx="220" cy="58" r="4" fill="#2f7f60" />
+            <circle cx="232" cy="52" r="3" fill="#2f7f60" />
+          </svg>
+        </div>
+        <p>Decision Tree adalah salah satu algoritma dalam Artificial Intelligence (AI) dan Machine Learning yang digunakan untuk mengambil keputusan berdasarkan serangkaian aturan berbentuk pohon.</p>
+        <div class="info-card green-card">
+          <h3>Struktur Decision Tree terdiri dari:</h3>
+          <ul>
+            <li>Root Node (Akar): Titik awal pengambilan keputusan</li>
+             <li>Decision Node (Node Keputusan): Node yang berisi pertanyaan atau kondisi tertentu</li>
+            <li>Branch Node (Node Cabang): Titik di mana pengambilan keputusan dilakukan berdasarkan kondisi</li>
+            <li>Leaf Node (Node Daun): Titik akhir yang menghasilkan keputusan akhir</li>
+          </ul>
+        </div>
+        <div class="info-card green-card">
+          <h3>Penerapan Decision Tree di Dunia Nyata</h3>
+          <ul>
+            <li>Diagnosis penyakit</li>
+             <li>Deteksi fraud perbankan</li>
+            <li>Persetujuan kredit</li>
+            <li>Prediksi cuaca</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-section" id="logika">
+        <div class="section-head">
+          <span>2</span>
+          <h2>Logika Decision Tree (Representasi Pohon)</h2>
+        </div>
+        <div class="tree-demo">
+          <div class="tree-visual">
+            <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path class="branch-line" d="M320 80 L200 160" />
+              <path class="branch-line" d="M320 80 L440 160" />
+              <path class="branch-line" d="M200 160 L100 260" />
+              <path class="branch-line" d="M200 160 L300 260" />
+
+              <g class="tree-node root-node">
+                <circle cx="320" cy="80" r="48" />
+                <g class="weather-icon root-icon" transform="translate(294 52)">
+                  <circle cx="18" cy="12" r="8" />
+                  <path d="M18 2 L18 0 M18 24 L18 26 M6 12 L4 12 M32 12 L34 12 M8 8 L6 6 M28 20 L30 22" />
+                </g>
+                <text x="320" y="80" text-anchor="middle" dominant-baseline="middle">
+                  <tspan x="320" dy="-10">Cuaca</tspan>
+                  <tspan x="320" dy="18">Cerah?</tspan>
+                </text>
+              </g>
+
+              <g class="tree-node branch-node">
+                <circle cx="200" cy="160" r="40" />
+                <g class="weather-icon cloudy-icon" transform="translate(172 138)">
+                  <path d="M8 18 Q12 10 18 12 Q24 4 32 10 Q38 10 42 16 Q46 20 42 24 H12 Q8 20 8 18 Z" />
+                  <line x1="16" y1="6" x2="16" y2="0" />
+                  <line x1="24" y1="6" x2="28" y2="0" />
+                </g>
+                <text x="200" y="160" text-anchor="middle" dominant-baseline="middle" class="small-text">
+                  <tspan x="200" dy="-8">Kelembapan</tspan>
+                  <tspan x="200" dy="18">Tinggi?</tspan>
+                </text>
+              </g>
+
+              <g class="tree-node leaf-node">
+                <rect x="40" y="240" width="120" height="64" rx="20" />
+                <text x="100" y="272" text-anchor="middle" dominant-baseline="middle">
+                  <tspan x="100" dy="-8" font-weight="bold">Tidak</tspan>
+                  <tspan x="100" dy="18" font-weight="bold">Main</tspan>
+                </text>
+              </g>
+
+              <g class="tree-node leaf-node">
+                <rect x="240" y="240" width="120" height="64" rx="20" />
+                <text x="300" y="272" text-anchor="middle" dominant-baseline="middle">
+                  <tspan x="300" dy="-8" font-weight="bold">Main</tspan>
+                  <tspan x="300" dy="18" font-weight="bold">Tennis</tspan>
+                </text>
+              </g>
+
+              <g class="tree-node leaf-node">
+                <rect x="440" y="140" width="120" height="64" rx="20" />
+                <text x="500" y="172" text-anchor="middle" dominant-baseline="middle">
+                  <tspan x="500" dy="-8" font-weight="bold">Main</tspan>
+                  <tspan x="500" dy="18" font-weight="bold">Tennis</tspan>
+                </text>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="tree-buttons">
+          <button type="button" id="btnRootNode" class="tree-node-btn">Cuaca Cerah?</button>
+          <button type="button" id="btnDecisionNode" class="tree-node-btn">Kelembapan Tinggi?</button>
+          <button type="button" id="btnLeafNo" class="tree-node-btn">Tidak Main</button>
+          <button type="button" id="btnLeafYes" class="tree-node-btn">Main Tennis</button>
+        </div>
+        <div class="section-head" id="treeExplanation">
+        </div>
+        <p>Logika: Jika cuaca cerah dan kelembapan rendah, maka boleh main tennis. Jika kelembapan tinggi meskipun cerah, sebaiknya tidak main. Jika cuaca tidak cerah, main tennis tanpa ragu.</p>
+      </section>
+
+      <section class="content-section" id="simulasi">
+        <div class="section-head">
+          <span>3</span>
+          <h2>Simulasi Prediksi Main Tennis</h2>
+        </div>
+        <div class="subvisual">
+          <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="skyGrad2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#143b2c"/>
+                <stop offset="100%" stop-color="#07160f"/>
+              </linearGradient>
+            </defs>
+            <rect width="280" height="180" rx="24" fill="url(#skyGrad2)" />
+            <circle cx="68" cy="48" r="20" fill="#f8e27c" opacity="0.98" />
+            <circle cx="62" cy="44" r="4" fill="#2e7c54" />
+            <circle cx="84" cy="52" r="3" fill="#2e7c54" />
+            <rect x="126" y="98" width="20" height="52" rx="8" fill="#3b7d54" />
+            <circle cx="136" cy="94" r="42" fill="#2c865f" />
+            <path d="M106 78 Q112 58 130 66 Q148 50 166 72 Q178 90 168 108 Q148 116 130 108 Q112 118 106 98 Z" fill="#99d9b5" />
+            <path d="M188 54 C180 64 190 78 204 72 C218 68 232 86 222 96 C212 104 198 96 188 96 Z" fill="#d5f2de" />
+            <path d="M190 46 L210 52" stroke="#cff4df" stroke-width="2" stroke-linecap="round" />
+            <path d="M210 40 L230 44" stroke="#cff4df" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <p>Pilih kondisi cuaca untuk melihat prediksi apakah sebaiknya bermain tennis atau tidak. Sistem akan menganalisis berdasarkan logika pohon keputusan.</p>
+        <div class="sim-card">
+          <div class="form-grid">
+            <label>
+              Cuaca
+              <select id="weather">
+                <option value="cerah">Cerah</option>
+                <option value="tidak-cerah">Tidak Cerah</option>
+              </select>
+            </label>
+            <label>
+              Kelembapan (%)
+              <input type="range" id="humidity" min="30" max="100" value="60" />
+              <span class="value" id="humValue">60</span>
+            </label>
+          </div>
+          <button id="runSim">Jalankan Simulasi</button>
+          <div class="result-panel" id="resultPanel">
+            <p class="result-title">Hasil Prediksi</p>
+            <div class="sim-tree-container" id="simTreeContainer"></div>
+            <p id="resultText">Atur parameter dan tekan tombol untuk melihat prediksi.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>© 2026 Decision Tree: Prediksi Main Tennis — Tema Emerald</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
